@@ -1,0 +1,146 @@
+body {
+    background-color: black;
+}
+
+/* .background-image {
+    width: 100%;
+    border-radius: 100px;
+} */
+.main-container {
+    border: 5px solid #fb9640;
+    background-image: url("assets/player-select.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 1400px;
+    height: 600px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+/* .row {
+    display: flex;
+} */
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    height: 50px;
+    border: 5px solid #fb9640;
+    color: white;
+}
+#color-picker {
+    display:flex;
+    /* position: sticky; */
+    /* top: 100px; */
+    /* margin-top: 0; */
+    width: 100px;
+    height: 60px;
+    border: 5px solid #fb9640;
+    cursor: pointer;
+}
+.palette-container .cp {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    padding-bottom: 0;
+}
+
+.container {
+    display: inline-flex;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+
+    /* border: 5px solid #ac0a00; */
+    /* width: 1000px;
+    height: 500px;  */
+}
+
+.grid-container {
+    
+    border: 5px solid #fb9640;
+    max-height: 400px;
+    max-width: 800px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+
+    margin-top: 50px;
+    margin: 50, 0, 25, 0;
+    /* padding-top: 20px; */
+}
+
+.row {
+    display: inline-block;
+}
+.square {
+    
+    border: 1px solid rgb(66, 59, 59);
+    height: .5rem;
+    width: .5rem;
+    
+}
+
+
+.palette-container, 
+.button-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 5px solid #fb9640;
+    height: 400px;
+    width : 100px;
+    margin-top: 50px;
+    /* margin-left: 25px;
+    margin-right: 25px; */
+}
+
+.palette-container {
+    flex-direction: column;
+    margin-right: 150px;
+    overflow: scroll;
+}
+.button-container {
+    margin-left: 150px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    width: 90px;
+    cursor: pointer;
+}
+.load-image-button {
+    background-image: url(assets/Qblock.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+}
+.brush-erase {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 90px;
+}
+
+.images-container {
+    display: block;
+    border: 5px solid #ac0a00;
+    height: 200px;
+    width: 9800px;
+    margin-top: 50px;
+}
+
+.circle {
+    border-radius: 20%;
+    min-height: 45px;
+    width: 75px;
+    margin-top: 10px;
+    cursor: pointer;
+}
