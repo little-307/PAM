@@ -128,6 +128,18 @@ button {
     justify-content: space-evenly;
     max-width: 90px;
 }
+.grid-custom, 
+.input-width,
+.input-height {
+    display: center;
+    margin-bottom: 5px;
+}
+.submit-button {
+    margin: 5px;
+    padding: 5px;
+    width: 90px;
+    cursor: pointer;
+}
 
 .images-container {
     display: block;
