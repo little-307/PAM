@@ -7,10 +7,10 @@ const inputHeight = document.querySelector('.input-height');
 const inputWidth = document.querySelector('.input-width');
 let customHeight = document.querySelector('.input-height').value;
 let customWidth = document.querySelector('.input-width').value;
-
+//For colors Custom and PaletteContainer
 const colorCustom = document.querySelector('#color-picker');
-
 const paletteContainer = document.querySelector('.palette-container');
+// for buttons
 const buttonContainer = document.querySelector('.button-container');
 const imagesContainer = document.querySelector('.images-container');
 const fillButton = document.querySelector('.fill-button');
@@ -18,6 +18,7 @@ const loadImageButton = document.querySelector('.load-image-button');
 const saveButton = document.querySelector('.save-button');
 const undoButton = document.querySelector('.undo-button');
 
+//       **Array section**
 //       Creation of Color Palette colors
 const paletteColors = ['blue', 'green', 'yellow', 'orange', 'red'];
 //       Creation of gameArr
@@ -36,10 +37,6 @@ const gameArr = [
 const allSquares = [];
 
 let paintColor = '#272727';
-
-//Objective: create a image element and append to class="images-container" '' imagesContainer
-// const newImage = document.createElement('img');
-// imagesContainer.appendChild(newImage);
 
 //Objective: add event listener to load image button
 loadImageButton.addEventListener('click', (e) => {
@@ -69,13 +66,6 @@ function makeGrid(customHeight, customWidth) {
 
 //      Custom Grid Function
 function changeGridSize() {
-    
-    // inputHeight.addEventListener('change', (e) => {
-    //     customHeight = e.target.value;
-    // });
-    // inputWidth.addEventListener('change', (e) => {
-    //     customWidth = e.target.value;
-    // });
     customGrid.addEventListener('submit', (e) => {
         e.preventDefault();
         customHeight = inputHeight.value;
@@ -99,7 +89,6 @@ function makeSquare() {
     return square;
 }
 //      FILL squares this function fills all squares with click of fill button.
-            
 function fillSquares() {
     fillButton.addEventListener('click', () => {
         const allSquares = document.querySelectorAll('.square');
@@ -118,12 +107,10 @@ function createColorCircleAndAppend(colorHex) {
         paintColor = colorCircle.style.backgroundColor;
     });
 }
-
 //  Create multiple palette colors with "for loop"
 function createColorPalette() {
     for ( let i = 0; i < paletteColors.length; i++ ) {
         let colorHex = paletteColors[i];
-
         createColorCircleAndAppend(colorHex);
     }
 }
@@ -138,9 +125,8 @@ function colorCustomApp() {
         paletteColors.unshift(colorCustom.value)
         createColorPalette();
     });
-    
 }
-
+// Drag and Draw (eventListiner)
 function dragAndDraw() {
     gridContainer.addEventListener('mousedown', () => {
         down = true;
@@ -154,7 +140,6 @@ function dragAndDraw() {
         });
     });
 }
-
 // create a function that saves each square background color to a local storage
 function saveBtn() {
     saveButton.addEventListener('click', () => {
@@ -171,7 +156,6 @@ function saveBtn() {
         localStorage.setItem('gridSave', JSON.stringify(gridInfo));
     })
 }
-
 //create a function that retrieves each square background color form local storage
 function loadBtn() {
     undoButton.addEventListener('click', () => {
@@ -181,27 +165,13 @@ function loadBtn() {
         }
     });
 }
-
-// FETCH random image from API
-// function getImageFromApi() {
-//     const fetchRequest = fetch('https://source.unsplash.com/random/300x200');
-
-//     fetchRequest.then(function(response) {
-//         return response;
-//     })
-//     .then(function(data) {
-//         console.log(data);
-//         gridContainer.style.backgroundImage = `url('${data.url}')`;
-//     })
-// }
-// https://pokeapi.co/api/v2/pokedex/12/
+//  Show random image from local file
 function showImage() {
     var a = Math.floor(Math.random()*gameArr.length);
     var img = gameArr[a];
     console.log(img);
     gridContainer.style.backgroundImage = img;
 }
-
 function init() {
     makeGrid(customWidth, customHeight);
     changeGridSize();
@@ -211,7 +181,5 @@ function init() {
     dragAndDraw();
     saveBtn();
     loadBtn();
-    
 }
-
 init();

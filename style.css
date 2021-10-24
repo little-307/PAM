@@ -2,10 +2,7 @@ body {
     background-color: black;
 }
 
-/* .background-image {
-    width: 100%;
-    border-radius: 100px;
-} */
+
 .main-container {
     border: 5px solid #fb9640;
     background-image: url("assets/player-select.jpg");
@@ -18,9 +15,7 @@ body {
     padding-bottom: 100px;
     text-align: center;
 }
-/* .row {
-    display: flex;
-} */
+
 .navbar {
     display: flex;
     flex-direction: row-reverse;
@@ -33,9 +28,6 @@ body {
 }
 #color-picker {
     display:flex;
-    /* position: sticky; */
-    /* top: 100px; */
-    /* margin-top: 0; */
     width: 100px;
     height: 60px;
     border: 5px solid #fb9640;
@@ -53,10 +45,6 @@ body {
     background-color: #fff;
     margin: auto;
     border-radius: 10px;
-
-    /* border: 5px solid #ac0a00; */
-    /* width: 1000px;
-    height: 500px;  */
 }
 
 .grid-container {
@@ -69,10 +57,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: scroll;
-
     margin-top: 50px;
     margin: 50, 0, 25, 0;
-    /* padding-top: 20px; */
 }
 
 .row {
@@ -95,8 +81,6 @@ body {
     height: 400px;
     width : 100px;
     margin-top: 50px;
-    /* margin-left: 25px;
-    margin-right: 25px; */
 }
 
 .palette-container {
